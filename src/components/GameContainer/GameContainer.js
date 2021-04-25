@@ -8,7 +8,6 @@ const GameContainer = () => {
     let dispatch = useDispatch()
     let cards = useSelector((state) => state.cards.cards)
     let cardsCount = useSelector((state) => state.cards.count)
-    console.log('cards ', cards)
 
     const onClickCard = (i) => {
         if (cards[i].isFlipped || cards[i].isExcluded) {
@@ -20,7 +19,6 @@ const GameContainer = () => {
             const flipped = cards.filter((card) => card.isFlipped)
             dispatch(flipCard(i))
             dispatch(countIncrement())
-            console.log('flipped ', flipped)
             if (flipped[0].pair === cards[i].pair) {
                 setTimeout(() => {
                     dispatch(excludeCards(cards[i].pair))
