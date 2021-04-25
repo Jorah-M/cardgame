@@ -11,13 +11,13 @@ export default function cardsReducer(state = initialState.cardsState, action) {
             }
         }
 
-        case "TURN_CARD": {
+        case "FLIP_CARD": {
             return {
                 ...state,
                 cards:
                     state.cards.map((card, i) => {
                         if (i === action.payload) {
-                            card.isTurned = true;
+                            card.isFlipped = true;
                             return card
                         } else {
                             return card
@@ -26,11 +26,11 @@ export default function cardsReducer(state = initialState.cardsState, action) {
             }
         }
 
-        case "TURN_ALL_CARDS": {
+        case "FLIP_ALL_CARDS": {
             return {
                 ...state,
                 cards: state.cards.map((card) => {
-                    card.isTurned = false
+                    card.isFlipped = false
                     return card;
                 })
             }
@@ -49,6 +49,21 @@ export default function cardsReducer(state = initialState.cardsState, action) {
                 count: 0
             }
         }
+
+        case "EXCLUDE_CARDS": {
+                return {
+                    ...state,
+                    cards:
+                        state.cards.map((card) => {
+                            if (card.pair === action.payload) {
+                                card.isExcluded = true;
+                                return card
+                            } else {
+                                return card
+                            }
+                        })
+                }
+            }
 
         default: return state;
     }

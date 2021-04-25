@@ -7,16 +7,16 @@ export const addCards = (cards) => {
     }
 }
 
-export const turnCard = (cardIndex) => {
+export const flipCard = (cardIndex) => {
     return {
-        type: "TURN_CARD",
+        type: "FLIP_CARD",
         payload: cardIndex
     }
 }
 
-export const turnAllCards = () => {
+export const flipAllCards = () => {
     return {
-        type: "TURN_ALL_CARDS",
+        type: "FLIP_ALL_CARDS",
     }
 }
 
@@ -29,5 +29,12 @@ export const countIncrement = () => {
 export const countClear = () => {
     return {
         type: "COUNT_CLEAR",
+    }
+}
+
+export const excludeCards = (cardPair) => {
+    return {
+        type: "EXCLUDE_CARDS",
+        payload: cardPair
     }
 }

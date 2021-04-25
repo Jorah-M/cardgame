@@ -7,15 +7,16 @@ import { useSelector } from 'react-redux'
 
 const VacancyCard = ({ onClick, index }) => {
     const card = useSelector((state) => state.cards.cards[index])
-    const isTurned =  useSelector((state) => state.cards.cards[index].isTurned)
+    const isFlipped = useSelector((state) => state.cards.cards[index].isFlipped)
+    const isExcluded = useSelector((state) => state.cards.cards[index].isExcluded)
 
     return (
         <div className={'game-card-wrapper'}>
             <div className={'game-card'} onClick={onClick}>
-                <div className={isTurned ? 'game-card__front' : 'game-card__front game-card__front-rotation'}>
+                <div className={`${isFlipped ? 'game-card__front' : 'game-card__front game-card__front-rotation'} ${isExcluded ? 'game-card__hide' : ''}`}>
                     <img src={card.url} alt={card.name} />
                 </div>
-                <div className={isTurned ? 'game-card__back' : 'game-card__back game-card__back-rotation'}>
+                <div className={`${isFlipped ? 'game-card__back' : 'game-card__back game-card__back-rotation'} ${isExcluded ? 'game-card__hide' : ''}`}>
                     <img src={BackSide} alt={'back side'} />
                 </div>
             </div>
