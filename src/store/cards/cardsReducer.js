@@ -31,20 +31,19 @@ export default function cardsReducer(state = initialState.cardsState, action) {
                 ...state,
                 cards: state.cards.map((card) => {
                     card.isTurned = false
-                    console.log(card)
                     return card;
                 })
             }
         }
 
-        case "TURNED_CARDS_COUNT_PLUS": {
+        case "COUNT_INCREMENT": {
             return {
                 ...state,
                 count: state.count + 1
             }
         }
 
-        case "TURNED_CARDS_COUNT_CLEAR": {
+        case "COUNT_CLEAR": {
             return {
                 ...state,
                 count: 0

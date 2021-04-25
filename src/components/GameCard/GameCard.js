@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types'
 import './GameCard.css'
 import BackSide from '../../images/shirt.png'
@@ -12,10 +12,6 @@ const VacancyCard = ({ onClick, index }) => {
     return (
         <div className={'game-card-wrapper'}>
             <div className={'game-card'} onClick={onClick}>
-                {/*<div*/}
-                {/*    className={isTurned ? 'game-card__front' : 'game-card__back'}>*/}
-                {/*    <img src={isTurned ? card.url : BackSide} alt={card.name} />*/}
-                {/*</div>*/}
                 <div className={isTurned ? 'game-card__front' : 'game-card__front game-card__front-rotation'}>
                     <img src={card.url} alt={card.name} />
                 </div>

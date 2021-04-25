@@ -20,14 +20,14 @@ export const turnAllCards = () => {
     }
 }
 
-export const turnedCardsCountPlus = () => {
+export const countIncrement = () => {
     return {
-        type: "TURNED_CARDS_COUNT_PLUS",
+        type: "COUNT_INCREMENT",
     }
 }
 
-export const turnedCardsCountClear = () => {
+export const countClear = () => {
     return {
-        type: "TURNED_CARDS_COUNT_CLEAR",
+        type: "COUNT_CLEAR",
     }
 }
