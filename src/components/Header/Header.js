@@ -7,10 +7,10 @@ const Header = () => {
         <div className={'header'}>
             <div className={'header__links'}>
                 <div className={'header__links__link'}>
-                    Ссылка один
+                    Future link, now doesn't lead anywhere
                 </div>
                 <div className={'header__links__link'}>
-                    Ссылка два
+                    Another link
                 </div>
             </div>
         </div>

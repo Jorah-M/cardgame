@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import './GameContainer.css';
 import GameCard from '../GameCard';
@@ -11,14 +11,22 @@ const GameContainer = () => {
     let cardsCount = useSelector((state) => state.cards.count)
 
     const onClickCard = (i) => {
-        if (cardsCount < 2) {
+        if (cards[i].isTurned) {
+            //TODO kind of 'already turned' alert
+        } else if (cardsCount < 2) {
             dispatch(turnCard(i))
             dispatch(turnedCardsCountPlus())
-        } else {
-            dispatch(turnAllCards())
-            dispatch(turnedCardsCountClear())
         }
     }
+
+    useEffect(() => {
+        if (cardsCount === 2) {
+            setTimeout(() => {
+                dispatch(turnAllCards())
+                dispatch(turnedCardsCountClear())
+            }, 1000)
+        }
+    }, [cardsCount])
 
     return (
         <div className={'game-grid'}>

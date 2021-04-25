@@ -2,7 +2,7 @@
 const initialState = {
     cardsState: {
         cards: [
-            { id: 1, name: 'Banana', isTurned: false, isExcluded: false, url: 'https://zavarinka.ru/upload/iblock/f69/f694481f3c1d3519d96240a61382cbc3.jpg', },
+            { id: 1, name: 'Strawberry', isTurned: false, isExcluded: false, url: 'https://i.pinimg.com/originals/ed/f9/55/edf9553b8c741b77d30369bf6049b592.jpg', },
             { id: 2, name: 'Simpsons', isTurned: false, isExcluded: false, url: 'https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/4f5c6d43-c629-4b6f-82b2-b3efaef9e0fd/200x300', },
             { id: 3, name: 'Dog', isTurned: false, isExcluded: false, url: 'https://vetpharma.org/upload/iblock/5fd/5fdb94e26bf4f0209a9e399d9e075bd3.jpg', },
             { id: 4, name: 'Cat', isTurned: false, isExcluded: false, url: 'https://i.pinimg.com/originals/64/54/ed/6454ed63f5b5887005ffbcd14e58fe21.jpg', },

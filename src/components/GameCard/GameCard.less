@@ -30,20 +30,28 @@
     backface-visibility: hidden;
   }
 
-  &__front {
-    background-color: azure;
-  }
+  //&__front {
+  //  background-color: azure;
+  //}
 
   &__back {
-    background-color: #BDBDBD;
+    //background-color: #BDBDBD;
     transform: rotateY(180deg);
   }
 
-  &:hover .game-card__front {
+  //&:hover .game-card__front {
+  //  transform: rotateY(180deg);
+  //}
+
+  .game-card__front-rotation {
     transform: rotateY(180deg);
   }
 
-  &:hover .game-card__back {
+  //&:hover .game-card__back {
+  //  transform: rotateY(360deg);
+  //}
+
+  .game-card__back-rotation {
     transform: rotateY(360deg);
   }
 
