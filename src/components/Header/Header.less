@@ -1,31 +1,102 @@
+@import '../../../shared/variables.less';
 
 .header {
   display: flex;
   justify-content: space-between;
-  height: 128px;
   background-color: beige;
   padding: 20px 0 20px 40px;
+
+  @media (min-width: @break-point-xl) {
+    height: 128px;
+  }
+
+  @media (max-width: @break-point-xl) {
+    height: 128px;
+  }
+
+  @media (max-width: @break-point-lg) {
+    height: 96px;
+  }
+
+  @media (max-width: @break-point-md) {
+    height: 96px;
+  }
+
+  @media (max-width: @break-point-sm) {
+    height: 96px;
+  }
 
   &__about {
     align-items: center;
     text-align: left;
-    font-size: 20px;
-    line-height: 24px;
     width: 33%;
+
+    @media (min-width: @break-point-xl) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @media (max-width: @break-point-xl) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @media (max-width: @break-point-lg) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @media (max-width: @break-point-md) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    @media (max-width: @break-point-sm) {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 
   &__links {
     display: flex;
     align-items: center;
+    max-width: 33%;
 
     &__link {
-      font-size: 16px;
-      line-height: 20px;
       margin-right: 20px;
       cursor: pointer;
 
+      @media (min-width: @break-point-xl) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      @media (max-width: @break-point-xl) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      @media (max-width: @break-point-lg) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      @media (max-width: @break-point-md) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      @media (max-width: @break-point-sm) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+
       &:last-child {
         margin-right: 40px;
+
+        @media (max-width: @break-point-sm) {
+          margin-right: 20px;
+        }
       }
     }
   }

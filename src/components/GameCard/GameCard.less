@@ -1,4 +1,4 @@
-
+@import '../../../shared/variables.less';
 
 .game-card {
   display: flex;
@@ -12,9 +12,35 @@
     cursor: pointer;
   }
 
-  width: 200px;
-  height: 300px;
-  margin-bottom: 50px;
+  @media (min-width: @break-point-xl) {
+    width: 200px;
+    height: 300px;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: @break-point-xl) {
+    width: 160px;
+    height: 240px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: @break-point-lg) {
+    width: 120px;
+    height: 180px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: @break-point-md) {
+    width: 100px;
+    height: 150px;
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: @break-point-sm) {
+    width: 100px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
 
   &__front, &__back {
     position: absolute;
@@ -30,6 +56,32 @@
 
     > img {
       border-radius: 5px;
+
+      @media (min-width: @break-point-xl) {
+        width: 200px;
+        height: 300px;
+      }
+
+      @media (max-width: @break-point-xl) {
+        width: 160px;
+        height: 240px;
+      }
+
+      @media (max-width: @break-point-lg) {
+        width: 120px;
+        height: 180px;
+      }
+
+      @media (max-width: @break-point-md) {
+        width: 100px;
+        height: 150px;
+      }
+
+      @media (max-width: @break-point-sm) {
+        width: 100px;
+        height: 150px;
+      }
+
     }
   }
 
