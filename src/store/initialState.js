@@ -19,7 +19,10 @@ let initialState = {
             // { id: 9, name: 'Stephen', isFlipped: false, isExcluded: false, url: 'https://s2982.pcdn.co/wp-content/uploads/2016/02/stephen_king-200x300.jpg.optimal.jpg', },
         ],
         count: 0,
-    }
+    },
+    gameState: {
+        game: 'notStarted',
+    },
 }
 
 const shuffle = (arr) => {
