@@ -30,6 +30,10 @@ const GameContainer = () => {
         }
     }
 
+    const onRestart = () => {
+        window.location.reload()
+    }
+
     useEffect(() => {
         if (cardsCount === 2) {
             setTimeout(() => {
@@ -54,8 +58,22 @@ const GameContainer = () => {
                         <GameCard index={i} />
                     </div>)
             }
-            {gameState === 'won' ? <Modal title={'Поздравляю!'} content={'Ты справился. Уря!'} /> : null}
-            {gameState === 'lost' ? <Modal title={'Вот незадача...'} content={`Пацан к успеху шел. Не фартануло, не повезло. \nПопробуй ещё разок!`}/> : null}
+
+            {gameState === 'won'
+                ? <Modal
+                    title={'Поздравляю!'}
+                    content={'Ты справился. Уря!'}
+                    onRestart={onRestart}
+                />
+                : null}
+
+            {gameState === 'lost'
+                ? <Modal
+                    title={'Вот незадача...'}
+                    content={`Пацан к успеху шел. Не фартануло, не повезло. \nПопробуй ещё разок!`}
+                    onRestart={onRestart}
+                />
+                : null}
         </div>
     )
 }

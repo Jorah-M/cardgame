@@ -3,9 +3,10 @@ import PropTypes from 'prop-types'
 import './Modal.css';
 
 const Modal = ({ isVisible = true,
-                title = 'Title',
-                content = 'Content',
-                onClose }) => {
+                   title = 'Title',
+                   content = 'Content',
+                   onClose,
+                   onRestart }) => {
 
     const onKeydown = (key) => {
         switch (key) {
@@ -35,7 +36,7 @@ const Modal = ({ isVisible = true,
                     <div className='modal-content'>{content}</div>
                 </div>
                 <div className='modal-footer'>
-                    <button onClick={onClose}>Закрыть</button>
+                    <button onClick={onRestart}>Новая игра</button>
                 </div>
             </div>
         </div>
